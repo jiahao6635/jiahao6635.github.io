@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <div className="container page-section">
       <section className="hero">
-        <p className="eyebrow">博客核心：00后程序员日拱一卒</p>
-        <h1>每天都会写一篇博客，即便写的不一定精彩，但相信日积月累的力量。</h1>
+        <p className="eyebrow">00后程序员日拱一卒</p>
+        <h2>每天都会写一篇博客，即便写的不一定精彩，但相信日积月累的力量。</h2>
         <p>
           这里记录编程实践、成长复盘与真实思考。首页展示最新文章摘要，点击文章卡片即可跳转完整内容。
         </p>
