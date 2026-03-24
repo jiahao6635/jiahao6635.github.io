@@ -38,8 +38,8 @@ export default async function BlogDetailPage({ params }: BlogDetailProps) {
       />
 
       <section className="article-content">
-        {post.content.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
+        {post.content.map((paragraph, index) => (
+          <div key={index} dangerouslySetInnerHTML={{ __html: paragraph }} />
         ))}
       </section>
     </article>
