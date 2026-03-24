@@ -10,6 +10,27 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "openclaw-claudecode-codex-guide",
+    title: "OpenClaw-ClaudeCode-Codex 实战指南",
+    date: "2026-03-24",
+    description: "这份指南面向已经准备把 AI 工具真正接入开发流程的人，目标不是"试一下能不能跑"，而是建立一套可重复、可监控、可验证的协作方法。",
+    categories: ["OpenClaw", "Claude Code", "Codex CLI", "AI Coding"],
+    coverImage:
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1400&q=80",
+    content: [
+      "这份指南面向已经准备把 AI 工具真正接入开发流程的人，目标不是"试一下能不能跑"，而是建立一套可重复、可监控、可验证的协作方法。",
+      "文中的命令以 Windows PowerShell 为主，Node.js 环境默认使用 LTS 版本。",
+      "**环境准备**：OpenClaw 作为总控层，负责接收任务、拆解任务、调用 Claude Code 或 Codex，并把结果汇总成一条完整执行链。Claude Code 更适合长链路编码、代码阅读、跨文件重构和交互式修复。Codex 适合明确目标、快速落地、命令行驱动的代码任务。",
+      "**快速开始**：最好的入门方式不是"随便问一句"，而是给出一个能验证完整链路的小任务。把以下三件事说清楚：目标是什么、完成标准是什么、什么时候切换执行器。",
+      "**执行器选择**：Claude Code 适合需要通读多个模块后再改代码、需要先分析方案再分步实施、需要长链路对话式修复的场景。Codex 适合任务定义清楚、需要快速改文件并立即执行命令验证、需要生成脚本补测试修 lint 的场景。",
+      "**实战案例**：前端项目开发（Vue3）推荐先用 Claude Code 阅读目录结构、识别状态管理方式、识别 API 封装方式，输出实施方案。然后用 Codex 创建页面与子组件、补路由、接入 mock 数据、运行 lint/build。",
+      "**前后端联调检查**：用 Claude Code 做接口契约审查，让它列出前端字段、后端字段、差异项、风险项。用 Codex 按差异清单逐项修复，执行联调脚本或本地构建。",
+      "**常见问题**：PTY 模式问题建议换用原生终端如 Windows Terminal，避免在不完整 PTY 环境里跑交互 TUI。权限确认问题建议提前确认运行环境的沙箱策略，把工作目录、可写目录和 git 权限预先设好。",
+      "**最佳实践**：高质量任务拆解必须同时包含目标、边界、验证。Prompt 编写建议结构：先给目标、再给约束、再给验证、最后规定输出格式。验证流程推荐顺序：lint、tsc、test、build、关键路径手测。",
+      "**总结**：OpenClaw、Claude Code、Codex 最有效的用法，不是三者分别使用，而是建立"编排 + 分析 + 执行 + 验证"的协作链。Claude Code 负责看全局、做复杂判断，Codex 负责快速落地和命令式闭环，OpenClaw 负责把整套流程串起来。",
+    ],
+  },
+  {
     slug: "openclaw-deployment-journal",
     title: "从零部署 OpenClaw：一个 AI 助手的诞生记录",
     date: "2026-03-19",
